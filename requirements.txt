@@ -1,0 +1,7 @@
+flask
+bcrypt
+sqlalchemy
+flask-login
+ccxt
+pytest
+docker

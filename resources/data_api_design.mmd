@@ -1,0 +1,22 @@
+
+    classDiagram
+        class User{
+            +int id
+            +str username
+            +str password_hash
+            +list[Bot] bots
+            +__init__(username: str, password: str)
+            +check_password(password: str): bool
+        }
+        class Bot{
+            +int id
+            +str exchange
+            +str symbol
+            +float lower_price
+            +float upper_price
+            +int grid_levels
+            +User user
+            +__init__(exchange: str, symbol: str, lower_price: float, upper_price: float, grid_levels: int, user: User)
+        }
+        User "1" -- "*" Bot: has
+    

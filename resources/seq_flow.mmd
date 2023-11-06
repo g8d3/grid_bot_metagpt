@@ -1,0 +1,14 @@
+
+    sequenceDiagram
+        participant U as User
+        participant F as Flask
+        participant B as Bot
+        participant G as GridBotService
+        U->>F: Request to create bot
+        F->>U: Show bot creation form
+        U->>F: Submit form with bot parameters
+        F->>B: Create new bot instance
+        B->>G: Start bot
+        G->>B: Update bot status
+        F->>U: Show updated bot status
+    
